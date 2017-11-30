@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "LocationService.h"
+@interface ViewController : UIViewController{
+    CLPlacemark *placeMark;
+    CLLocation *currentLocation;
+    CLGeocoder *reverseGeocoder;
+}
+@property(nonatomic,retain)CLPlacemark *placeMark;
+@property(nonatomic,retain) CLLocation *currentLocation;
+@property (weak, nonatomic) IBOutlet UILabel *offerMsgLbl;
 
 @end
 
